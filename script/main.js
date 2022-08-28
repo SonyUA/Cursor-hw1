@@ -1,49 +1,40 @@
-let priceBanana = 15.678;
-let priceApple = 123.965;
-let priceJuice = 90.2345;
+const priceBanana = 15.678;
+const priceApple = 123.965;
+const priceJuice = 90.2345;
 
-let maxPrice = Math.max(priceBanana, priceApple, priceJuice);
+const maxPrice = Math.max(priceBanana, priceApple, priceJuice);
 console.log(maxPrice + " " + "максимальне число");
 
-let minPrice = Math.min(priceBanana, priceApple, priceJuice);
+const minPrice = Math.min(priceBanana, priceApple, priceJuice);
 console.log(minPrice + " " + "мінімальне число");
 
-let sumOfAll = Number(priceBanana + priceApple + priceJuice);
+const sumOfAll = Number(priceBanana + priceApple + priceJuice);
 console.log(sumOfAll + " " + "вартість всіх товарів");
 
-let roundEverythingDown = Math.floor(sumOfAll);
+const roundEverythingDown = Math.floor(priceBanana) + Math.floor(priceApple) + Math.floor(priceJuice);
 console.log(roundEverythingDown + " " + "сума всіх товарів заокругленно до меньшого");
 
-let roundToHundreds = Math.ceil(sumOfAll / 100) * 100;
+const roundToHundreds = Math.ceil(sumOfAll / 100) * 100;
 console.log(roundToHundreds + " " + "сума заокругленна до сотень в більшу сторону");
 
-let evenOrOdd = roundEverythingDown % 2 === 0;
+const evenOrOdd = roundEverythingDown % 2 === 0;
 console.log(evenOrOdd + " " + " - парне true , непарне false");
 
-/* function TheCustomerBuys(n) {
-    if (Number.isFinite(n) === true) {
-        let rest = n - sumOfAll;
-        console.log(rest + " " + `здача з ${n} грн`);
-    } else {
-        false;
-    }
-}
-TheCustomerBuys(500); */
-let rest = 500 - sumOfAll;
+const rest = 500 - sumOfAll;
 console.log(rest + " " + " - здача з 500 грн");
 
-let averageValue = (sumOfAll / 3).toFixed(2);
+const averageValue = (sumOfAll / 3).toFixed(2);
 console.log(averageValue + " " + " - середнє значення цін округлене до другого знаку після коми");
 
-let randomDiscount = Math.round(Math.random() * 100);
+const randomDiscount = Math.round(Math.random() * 100);
 console.log(randomDiscount + " % " + " - випадкова знижка");
 
-let discountInGrn = ((sumOfAll * randomDiscount) / 100).toFixed(2);
+const discountInGrn = ((sumOfAll * randomDiscount) / 100).toFixed(2);
 
-let = discountedAmount = (sumOfAll - (sumOfAll * randomDiscount) / 100).toFixed(2);
+const discountedAmount = (sumOfAll - (sumOfAll * randomDiscount) / 100).toFixed(2);
 console.log(discountedAmount + " " + " сума до оплати з випадковою знижкою округлена до 2 знаків після коми");
 
-let profit = (sumOfAll / 2 - discountInGrn).toFixed(2);
+const profit = (sumOfAll / 2 - discountInGrn).toFixed(2);
 console.log(profit + " " + "чистий прибуток");
 
 let text = document.getElementById("box");
